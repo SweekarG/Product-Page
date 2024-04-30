@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "before-price": 500,
+    "price": 200,
+    "image": "images/buff.jpg",
+    "quantity": "2kg",
+    "reviews": "4.9 (5 reviews)"
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "before-price": 500,
+    "price": 300,
+    "image": "images/chicken.jpg",
+    "quantity": "2kg",
+    "reviews": "4.9 (5 reviews)"
+  },
+  {
+    "id": 3,
+    "name": "John Smith",
+    "before-price": 500,
+    "price": 400,
+    "image": "images/pork.jpg",
+    "quantity": "2kg",
+    "reviews": "4.9 (5 reviews)"
+  },
+  {
+    "id": 4,
+    "name": "Jane Smith",
+    "before-price": 500,
+    "price": 500,
+    "image": "images/mutton.jpg",
+    "quantity": "2kg",
+    "reviews": "4.9 (5 reviews)"
+  }
+]
