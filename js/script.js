@@ -57,35 +57,245 @@ snowflakesTab.addEventListener("click", function (e) {
   darkTh.classList.add("clicked");
 });
 
-//importing data from json file
+// json
 
+const products1 = [
+  {
+    id: 1,
+    name: "John Doe",
+    beforePrice: 500,
+    price: 200,
+    image: "images/buff.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 2,
+    name: "Jane Doe",
+    beforePrice: 500,
+    price: 300,
+    image: "images/chicken.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 3,
+    name: "John Smith",
+    beforePrice: 500,
+    price: 400,
+    image: "images/pork.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+];
+const products2 = [
+  {
+    id: 1,
+    name: "John Doe",
+    beforePrice: 500,
+    price: 200,
+    image: "images/buff.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 2,
+    name: "Jane Doe",
+    beforePrice: 500,
+    price: 300,
+    image: "images/chicken.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 3,
+    name: "John Smith",
+    beforePrice: 500,
+    price: 400,
+    image: "images/pork.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+];
+const products3 = [
+  {
+    id: 1,
+    name: "John Doe",
+    beforePrice: 500,
+    price: 200,
+    image: "images/buff.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 2,
+    name: "Jane Doe",
+    beforePrice: 500,
+    price: 300,
+    image: "images/chicken.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 3,
+    name: "John Smith",
+    beforePrice: 500,
+    price: 400,
+    image: "images/pork.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+];
+const products4 = [
+  {
+    id: 1,
+    name: "John Doe",
+    beforePrice: 500,
+    price: 200,
+    image: "images/buff.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 2,
+    name: "Jane Doe",
+    beforePrice: 500,
+    price: 300,
+    image: "images/chicken.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 3,
+    name: "John Smith",
+    beforePrice: 500,
+    price: 400,
+    image: "images/pork.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 4,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+];
+const sectionSelectors = [
+  ".section .section--featured",
+  "#section--1 .products__content",
+];
+const sectionElement = document.querySelector(".section");
+const featuredContent = sectionElement.querySelector(".section--featured");
 const productsContent = document.querySelector(
-  "#section--1 .products__content--1"
+  "#section--1 .products__content--active"
 );
-let products = [];
+const productsContent2 = document.querySelector(
+  "#section--1 .products__content--2"
+);
+const productsContent3 = document.querySelector(
+  "#section--1 .products__content--3"
+);
 
-const addDataToHTML = () => {
-  if (products.length > 0) {
-    products.forEach((product) => {
-      let newProduct = document.createElement("div");
-      newProduct.dataset.id = product.id;
-      newProduct.classList.add("products__desc");
-      newProduct.innerHTML = `<img src="${product.image}" alt="${product.name}" class="products__img">
+const addDataToHTML = (products, container) => {
+  products.forEach((product) => {
+    let newProduct = document.createElement("div");
+    newProduct.dataset.id = product.id;
+    newProduct.classList.add("products__desc");
+    newProduct.innerHTML = `<img src="${product.image}" alt="${product.name}" class="products__img">
       <h4 class="products__title">${product.name}<p class= "quantity">${product.quantity}</p></h4>
       <div class = "star"><img src="img/star.png" alt="star" class="star__img">${product.reviews}</div>
       <h4 class= "price"><p><del>${product.beforePrice}</del></p>${product.price}</h4>
       <button class="btn btn--cart">+ Add to Cart</button>`;
-      productsContent.appendChild(newProduct);
-    });
-  }
+    container.appendChild(newProduct);
+  });
 };
 
-const initApp = () => {
-  fetch("products.json")
-    .then((response) => response.json())
-    .then((data) => {
-      products = data;
-      addDataToHTML();
-    });
-};
-initApp();
+addDataToHTML(products1, productsContent);
+addDataToHTML(products2, featuredContent);
+addDataToHTML(products3, productsContent2);
+addDataToHTML(products4, productsContent3);

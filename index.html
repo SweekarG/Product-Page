@@ -47,14 +47,30 @@
           </li>
         </ul>
       </nav>
-      <!-- <div class="cartTab">
+      <div class="modal hidden">
+        <button class = "btn--close-modal">&times;</button>
         <h1>Shopping Cart</h1>
-        <div class="listCart"></div>
-        <div class="btnn">
-          <button class="close">Close</button>
-          <button class="CheckOut">Check Out</button>
-        </div> -->
-      </div>
+       <div class="list-cart">
+        <div class = "cart-item">
+         <div class="cart-item__image">
+           <img src="images/pork.jpg" class = "products__img"alt="Vegetable" />
+           </div>
+           <div class="cart-item__name">Name</div>
+           <div class="cart-item__price">Price</div>
+            <div class="cart-item__quantity">
+              <span class="minus"><</span>
+              <span>1</span>
+              <span class="add">></span>
+            </div>
+          
+       </div>
+        </div>
+        </div>
+        <div class="overlay hidden">
+          </div>
+
+     
+      
       <div class="change__mode">
         <div class="dark__mode">
           <p>Styles</p>
@@ -127,6 +143,19 @@
         />
       </div>
     </header>
+    <section class = " section ">
+      <div class="section__title">
+        <h2 class="section__description">
+          Products
+        </h2>
+        <h3 class="section__header">
+          Our all available products.
+      </div>
+      <div class="section--featured">
+      
+      </div>
+    </div>
+    </section>
     <section class="section" id="section--1">
       <div class="section__title">
         <h5 class="section__header">Vegetables</h5>
@@ -149,6 +178,8 @@
         <div
           class="products__content products__content--1 products__content--active"
         ></div>
+        <div class="products__content products__content--2"></div>
+        <div class="products__content products__content--3"></div>
       </div>
     </section>
     <script src="js/script.js"></script>
