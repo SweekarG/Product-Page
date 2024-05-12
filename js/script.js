@@ -453,7 +453,7 @@ const addToCartFunction = (products_id) => {
 };
 
 const addCartToHTML = () => {
-  listCart.innerHTML = "";
+  modal.innerHTML = "";
   if (carts.length > 0) {
     carts.forEach((cart) => {
       let product = document.createElement("div");
