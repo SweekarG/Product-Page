@@ -99,7 +99,7 @@ const products1 = [
 ];
 const products2 = [
   {
-    id: 1,
+    id: 5,
     name: "John Doe",
     beforePrice: 500,
     price: 200,
@@ -108,7 +108,7 @@ const products2 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 2,
+    id: 6,
     name: "Jane Doe",
     beforePrice: 500,
     price: 300,
@@ -117,7 +117,7 @@ const products2 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 3,
+    id: 7,
     name: "John Smith",
     beforePrice: 500,
     price: 400,
@@ -126,7 +126,7 @@ const products2 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 4,
+    id: 8,
     name: "Jane Smith",
     beforePrice: 500,
     price: 500,
@@ -135,7 +135,7 @@ const products2 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 4,
+    id: 9,
     name: "Jane Smith",
     beforePrice: 500,
     price: 500,
@@ -144,7 +144,7 @@ const products2 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 4,
+    id: 10,
     name: "Jane Smith",
     beforePrice: 500,
     price: 500,
@@ -153,7 +153,7 @@ const products2 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 4,
+    id: 11,
     name: "Jane Smith",
     beforePrice: 500,
     price: 500,
@@ -162,7 +162,7 @@ const products2 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 4,
+    id: 12,
     name: "Jane Smith",
     beforePrice: 500,
     price: 500,
@@ -171,7 +171,7 @@ const products2 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 4,
+    id: 13,
     name: "Jane Smith",
     beforePrice: 500,
     price: 500,
@@ -180,7 +180,7 @@ const products2 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 4,
+    id: 14,
     name: "Jane Smith",
     beforePrice: 500,
     price: 500,
@@ -191,7 +191,7 @@ const products2 = [
 ];
 const products3 = [
   {
-    id: 1,
+    id: 15,
     name: "John Doe",
     beforePrice: 500,
     price: 200,
@@ -200,7 +200,7 @@ const products3 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 2,
+    id: 16,
     name: "Jane Doe",
     beforePrice: 500,
     price: 300,
@@ -209,16 +209,16 @@ const products3 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 3,
+    id: 17,
     name: "John Smith",
     beforePrice: 500,
     price: 400,
-    image: "images/pork.jpg",
+    image: "images/buff.jpg",
     quantity: "2kg",
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 4,
+    id: 18,
     name: "Jane Smith",
     beforePrice: 500,
     price: 500,
@@ -229,7 +229,7 @@ const products3 = [
 ];
 const products4 = [
   {
-    id: 1,
+    id: 19,
     name: "John Doe",
     beforePrice: 500,
     price: 200,
@@ -238,7 +238,7 @@ const products4 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 2,
+    id: 20,
     name: "Jane Doe",
     beforePrice: 500,
     price: 300,
@@ -247,16 +247,92 @@ const products4 = [
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 3,
+    id: 21,
     name: "John Smith",
     beforePrice: 500,
     price: 400,
-    image: "images/pork.jpg",
+    image: "images/fish.jpg",
     quantity: "2kg",
     reviews: "4.9 (5 reviews)",
   },
   {
-    id: 4,
+    id: 22,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+];
+const products5 = [
+  {
+    id: 19,
+    name: "John Doe",
+    beforePrice: 500,
+    price: 200,
+    image: "images/buff.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 20,
+    name: "Jane Doe",
+    beforePrice: 500,
+    price: 300,
+    image: "images/chicken.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 21,
+    name: "John Smith",
+    beforePrice: 500,
+    price: 400,
+    image: "images/fish.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 22,
+    name: "Jane Smith",
+    beforePrice: 500,
+    price: 500,
+    image: "images/mutton.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+];
+const products6 = [
+  {
+    id: 19,
+    name: "John Doe",
+    beforePrice: 500,
+    price: 200,
+    image: "images/buff.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 20,
+    name: "Jane Doe",
+    beforePrice: 500,
+    price: 300,
+    image: "images/chicken.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 21,
+    name: "John Smith",
+    beforePrice: 500,
+    price: 400,
+    image: "images/fish.jpg",
+    quantity: "2kg",
+    reviews: "4.9 (5 reviews)",
+  },
+  {
+    id: 22,
     name: "Jane Smith",
     beforePrice: 500,
     price: 500,
@@ -280,6 +356,12 @@ const productsContent2 = document.querySelector(
 const productsContent3 = document.querySelector(
   "#section--1 .products__content--3"
 );
+const productsContent4 = document.querySelector(
+  "#section--1 .products__content--4"
+);
+const productsContent5 = document.querySelector(
+  "#section--1 .products__content--5"
+);
 
 const addDataToHTML = (products, container) => {
   products.forEach((product) => {
@@ -299,3 +381,106 @@ addDataToHTML(products1, productsContent);
 addDataToHTML(products2, featuredContent);
 addDataToHTML(products3, productsContent2);
 addDataToHTML(products4, productsContent3);
+addDataToHTML(products5, productsContent4);
+addDataToHTML(products6, productsContent5);
+
+//shopping cart
+const cart = document.querySelector(".icon-cart");
+const modal = document.querySelector(".modal");
+const close = document.querySelector(".close-modal");
+const overlay = document.querySelector(".overlay");
+
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+cart.addEventListener("click", openModal);
+close.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+//add to cart functionality
+const productsAll = [
+  products1,
+  products2,
+  products3,
+  products4,
+  products5,
+  products6,
+];
+let listCart = document.querySelector(".list-cart");
+let cartSpan = document.querySelector(".list-cart span");
+
+let carts = [];
+
+const addToCart = document.querySelectorAll(".btn--cart");
+const productDesc = document.querySelectorAll(".products__desc");
+productDesc.forEach((product) => {
+  product.addEventListener("click", function (e) {
+    let positionClick = e.target;
+    if (positionClick.classList.contains("btn--cart")) {
+      let products_id = positionClick.parentElement.dataset.id;
+
+      addToCartFunction(products_id);
+    }
+  });
+});
+
+const addToCartFunction = (products_id) => {
+  let positionInCart = carts.findIndex(
+    (cart) => cart.products_id == products_id
+  );
+  if (carts.length <= 0) {
+    carts = [
+      {
+        products_id: products_id,
+        quantity: 1,
+      },
+    ];
+  } else if (positionInCart == -1) {
+    carts.push({
+      products_id: products_id,
+      quantity: 1,
+    });
+  } else {
+    carts[positionInCart].quantity += 1;
+  }
+  console.log(carts);
+};
+
+const addCartToHTML = () => {
+  listCart.innerHTML = "";
+  if (carts.length > 0) {
+    carts.forEach((cart) => {
+      let product = document.createElement("div");
+      product.classList.add("cart-item");
+      productsAll.forEach((products) => {
+        let productData = productsAll.find(
+          (product) => product.id == cart.products_id
+        );
+        if (productData) {
+          let info = productsAll[productData];
+          product.innerHTML = ` <div class = "cart-item">
+      <div class="cart-item__image">
+        <img src="${info.image}" class = "products__img--cart"alt="Vegetable" />
+        </div>
+        <div class="cart-item__name">${info.name}</div>
+        <div class="cart-item__price">Rs${info.price * cart.quantity}</div>
+         <div class="cart-item__quantity">
+           <span class="minus"><</span>
+           <span>${cart.quantity}</span>
+           <span class="add">></span>
+         </div>
+       </div>`;
+          listCart.appendChild(product);
+          return;
+        }
+      });
+    });
+  }
+};
+addCartToHTML();
