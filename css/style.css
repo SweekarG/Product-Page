@@ -144,90 +144,12 @@ img {
   background-color: #4bbb7d;
   color: #333;
 }
-.cartTab {
-  width: 400px;
-  background-color: black;
-  color: #eee;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  inset: 0 0 0 auto;
-  display: grid;
-  grid-template-rows: 70px 1fr 70px;
-}
+
 .section--featured {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   overflow-x: auto;
   scrollbar-width: none;
-}
-.cartTab .hidden {
-}
-.cartTab h1 {
-  padding: 20px;
-  margin: 0;
-  font-weight: 300;
-}
-.cartTab .btnn {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.cartTab .btnn button {
-  background-color: #ffbb00;
-  border: none;
-  cursor: pointer;
-}
-.cartTab .btnn .close {
-  background-color: #fd424b;
-}
-
-.dark__mode {
-  max-width: fit-content;
-  position: fixed;
-  left: -250px;
-  transition: left 0.5s ease;
-}
-.dark__mode .clicked {
-  left: 0;
-}
-.dark__mode ul li {
-  display: inline-block;
-  margin-right: 5px;
-  margin-top: 5px;
-}
-.snowflakes-container {
-  background-color: #fff;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
-
-.snowflakes-container .clicked {
-  position: fixed;
-  transition: left 0.5s ease;
-  left: 200px;
-}
-.snowflakes-container:hover {
-  cursor: pointer;
-}
-.snow-flakes {
-  height: 35px;
-  width: 35px;
-  fill: #333;
-  animation: spin 2s linear infinite;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /* Header */
@@ -398,13 +320,7 @@ h4 {
   font-weight: 500;
   background-color: #f3f3f3;
 }
-/*.products__content--active {
-  display: inline-block;
-  margin: 5px;
-  padding: 15px;
-  font-weight: 500;
-  background-color: #f3f3f3;
-}*/
+
 .products__content button {
   margin-top: 5px;
 }
@@ -508,12 +424,16 @@ h4 {
 .hidden {
   display: none;
 }
-.cart-item {
-  display: block;
+.list-cart {
   display: grid;
 
-  grid-template-columns: 25% 25% 25% 1fr;
-
+  text-align: center;
+  align-items: center;
+  padding: 7px;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: 50% 50% 50% 50%;
   text-align: center;
   align-items: center;
   padding: 7px;
