@@ -420,6 +420,7 @@ h4 {
   position: fixed;
   top: 12px;
   right: 20px;
+  cursor: pointer;
 }
 .hidden {
   display: none;
@@ -461,4 +462,34 @@ h4 {
 .cart-item__quantity span:nth-child(2) {
   background-color: transparent;
   color: black;
+}
+
+.slide--img {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+.slider-component {
+  position: relative;
+}
+.slider-component .slide--btn {
+}
+.back--btn {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+}
+.next--btn {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+}
+.trash {
+  fill: #fd424b;
+  height: 20px;
+  width: 20px;
 }
