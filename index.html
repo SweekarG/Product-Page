@@ -7,6 +7,26 @@
     <title>Martflix</title>
   </head>
   <body>
+    <!-- signup modal window -->
+    <div class="modal-signup hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Shop from us <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input class="name" type="text" />
+        <label >Last Name</label>
+        <input class="lastName" type="text" />
+        <label>Email Address</label>
+        <input class="email" type="email" />
+        <button class="btn btn--submit">Start shopping &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay-singup hidden "></div>
+
+    <!-- newsletter modal window -->
     <div class="overlay" data-overlay></div>
     <div class="modal" data-modal>
       <div class="modal-close-overlay" data-modal-overlay></div>
@@ -49,6 +69,8 @@
         </div>
       </div>
     </div>
+
+    <!-- main header and navigation  -->
     <header class="Header" id="section--01">
       <nav class="nav">
         <img src="images/logo.png" alt="MartFlix Logo" class="nav__logo "
@@ -70,9 +92,7 @@
             <a class="nav__link" href="section--5">Research</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link nav__link--btn btn--show-modal" href="#"
-              >Shop now</a
-            >
+            <a class="nav__link nav__link--btn btn--show-modal" href="#">Shop now</a>
           </li>
           <li class="nav__item icon-cart">
             <svg
@@ -113,7 +133,7 @@
         </div>
       </div>
 
-
+        <!-- shopping cart modal window   -->
       <div class="modal-cart hidden">
         <button class = "close-modal">&times;</button>
         <h2 >Shopping Cart</h2>
@@ -141,22 +161,10 @@
          
         </div>
       </div>
-      <!-- <div class="header__title">
-        <h1>
-          Bringing
-          <span class="highlight"> Freshness</span>
-          Home<br />
-          <span class="highlight"> Daily</span>
-        </h1>
-        <h4>Freshness delivered to your doorstep. Order today!</h4>
-        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
-        <img
-          src="images/Untitled design.png"
-          class="header__img"
-          alt="Keto Diet Food Still Life"
-        />
-      </div> -->
+      
     </header>
+
+    <!-- Featured products section -->
     <section class = " section ">
       <div class="section__title">
         <h2 class="section__description">
@@ -175,6 +183,8 @@
     </div>
     
     </section>
+
+    <!-- About products section -->
     <div class="overlay-showcase hidden"></div>
     <div class="modal-showcase hidden">
       <button class = "close-modal-showcase">&times;</button>
@@ -222,6 +232,8 @@
               <div class="showcase-status-bar"></div>
             </div>
 
+
+
             <div class="countdown-box">
               <p class="countdown-desc">Hurry Up! Offer ends in:</p>
 
@@ -254,6 +266,7 @@
     </div>
   </div>
 
+      <!-- Products categories section in tabbed component -->
     <section class="section" id="section--1">
       <div class="section__title">
         <h2 class="section__description">
@@ -291,7 +304,8 @@
         <div class="products__content products__content--5"></div>
       </div>
     </section>
-    <section class = main--footer>
+    <!-- Footer section -->
+    <section class = "main--footer " >
       <footer class="footer">
        <ul class="footer__nav">
          <li class="footer__item">

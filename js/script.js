@@ -1,6 +1,6 @@
 "use strict";
 
-//Tabbed component for categories
+//Making Tabbed component for categories
 const tab = document.querySelectorAll(".products__tab  ");
 const tabContainer = document.querySelector(".products__tab-container");
 const tabContent = document.querySelectorAll(".products__content");
@@ -21,7 +21,7 @@ tabContainer.addEventListener("click", function (e) {
   clicked.classList.add("products__tab--active");
 });
 
-//newsletter
+//newsletter suscribe modal
 const modalNews = document.querySelector("[data-modal]");
 const modalCloseBtn = document.querySelector("[data-modal-close]");
 const modalCloseOverlay = document.querySelector("[data-modal-overlay]");
@@ -57,7 +57,7 @@ const revealSec = function (entries, observer) {
 };
 const sectionObserver = new IntersectionObserver(revealSec, {
   root: null,
-  threshold: 0.13,
+  threshold: 0.15,
 });
 allSec.forEach(function (section) {
   sectionObserver.observe(section);
@@ -493,7 +493,7 @@ const products6 = [
   },
 ];
 
-//adding products to the html
+//adding products to  html using function for featured products and tabbed components for categories
 const sectionSelectors = [
   ".section .section--featured",
   "#section--1 .products__content",
@@ -537,7 +537,7 @@ addDataToHTML(products4, productsContent3);
 addDataToHTML(products5, productsContent4);
 addDataToHTML(products6, productsContent5);
 
-//shopping cart
+//sopening and closing cart
 const cart = document.querySelector(".icon-cart");
 const modal = document.querySelector(".modal-cart");
 const close = document.querySelector(".close-modal");
@@ -556,7 +556,7 @@ cart.addEventListener("click", openModal);
 close.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
-//click on product
+//click on product and opening product description
 const products = document.querySelectorAll(".products__img");
 const modalShow = document.querySelector(".modal-showcase");
 const overlayShow = document.querySelector(".overlay-showcase");
@@ -670,7 +670,7 @@ const addCartToHTML = () => {
 
 addCartToHTML();
 
-//slide on click
+//slide on click for featured products
 
 const slideBtn = document.querySelectorAll(".slider-component .slide--img");
 const contentList = document.querySelector(
@@ -693,18 +693,41 @@ const handleBtns = () => {
     contentList.scrollLeft >= maxScrollLeft ? "none" : "flex";
 };
 
-//Dlete item from cart
-const parentElement = document.querySelector(".list-cart");
+//opening signup box
+const signUp = document.querySelectorAll(".btn--show-modal");
+const closeSignup = document.querySelector(".btn--close-modal");
+const modalSignup = document.querySelector(".modal-signup");
+const overlaySignup = document.querySelector(".overlay-singup");
+const submit = document.querySelector(".btn--submit");
 
-parentElement.addEventListener("click", function (e) {
-  if (e.target.classList.contains("trash")) {
-    console.log("clicked on trash");
-    const cartItem = e.target.closest(".cart-item");
-    const productId = cartItem.dataset.productId;
-    const index = carts.findIndex((item) => item.products_id == productId);
-    if (index !== -1) {
-      carts.splice(index, 1);
-      addCartToHTML();
-    }
+const openSignup = function (e) {
+  e.preventDefault();
+  console.log("clicked");
+  modalSignup.classList.remove("hidden");
+  overlaySignup.classList.remove("hidden");
+};
+const closeSignupFunc = function () {
+  modalSignup.classList.add("hidden");
+  overlaySignup.classList.add("hidden");
+};
+closeSignup.addEventListener("click", closeSignupFunc);
+signUp.forEach((btn) => btn.addEventListener("click", openSignup));
+overlaySignup.addEventListener("click", closeSignupFunc);
+
+//submit form and alert
+
+submit.addEventListener("click", function (e) {
+  e.preventDefault();
+  let email = document.querySelector(".email").value;
+  let name = document.querySelector(".name").value;
+  let lastName = document.querySelector(".lastName").value;
+  if (email === "" || name === "" || lastName === "") {
+    alert("Please enter name,lastname and email");
+  } else {
+    alert("Thank you for signing up");
+    document.querySelector(".email").value = "";
+    document.querySelector(".name").value = "";
+    document.querySelector(".lastName").value = "";
   }
+  closeSignupFunc();
 });
