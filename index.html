@@ -7,6 +7,48 @@
     <title>Martflix</title>
   </head>
   <body>
+    <div class="overlay" data-overlay></div>
+    <div class="modal" data-modal>
+      <div class="modal-close-overlay" data-modal-overlay></div>
+
+      <div class="modal-content">
+        <button class="close-modal-news" data-modal-close>
+          &times;
+        </button>
+
+        <div class="newsletter-img">
+          <img
+            src="images/news-leter.jpg"
+            alt="subscribe newsletter"
+            width="400"
+            height="400"
+          />
+        </div>
+
+        <div class="newsletter">
+          <form action="#">
+            <div class="newsletter-header">
+              <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+
+              <p class="newsletter-desc">
+                Subscribe the <b>MartFlix</b> to get latest products and discount
+                update.
+              </p>
+            </div>
+
+            <input
+              type="email"
+              name="email"
+              class="email-field"
+              placeholder="Email Address"
+              required
+            />
+
+            <button type="submit" class="btn-newsletter">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <header class="Header" id="section--01">
       <nav class="nav">
         <img src="images/logo.png" alt="MartFlix Logo" class="nav__logo "
@@ -47,7 +89,32 @@
           </li>
         </ul>
       </nav>
-      <div class="modal hidden">
+      <!-- notification slide -->
+      <div class="notification-toast" data-toast>
+        <button class="toast-close-btn" data-toast-close>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+  
+        <div class="toast-banner">
+          <img
+            src="images/milk.jpg"
+            alt="Milk"
+            width="80"
+            height="70"
+          />
+        </div>
+  
+        <div class="toast-detail">
+          <p class="toast-message">Someone in new just bought</p>
+  
+          <p class="toast-title">5 liter milk</p>
+  
+          <p class="toast-meta"><time datetime="PT2M">2 Minutes</time> ago</p>
+        </div>
+      </div>
+
+
+      <div class="modal-cart hidden">
         <button class = "close-modal">&times;</button>
         <h2 >Shopping Cart</h2>
        <div class="list-cart">
@@ -58,7 +125,7 @@
                 
         </div>
       </div>
-        <div class="overlay hidden">
+        <div class="overlay-cart hidden">
           </div>
 
      
@@ -108,6 +175,85 @@
     </div>
     
     </section>
+    <div class="overlay-showcase hidden"></div>
+    <div class="modal-showcase hidden">
+      <button class = "close-modal-showcase">&times;</button>
+      
+      <div class = "showcase-wrapper">
+              <div class="showcase-container">
+        <div class="showcase">
+          <div class="showcase-banner">
+            <img
+              src="images/milk.jpg"
+              alt="Milk"
+              class="showcase-img"
+            />
+          </div>
+
+          <div class="showcase-content">
+            
+
+            <a href="#">
+              <h3 class="showcase-title">
+                Milk
+              </h3>
+            </a>
+
+            <p class="showcase-desc">
+              Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+              dolor sit amet consectetur Lorem ipsum dolor
+            </p>
+
+            <div class="price-box">
+              <p class="price">$150.00</p>
+
+              <del>$200.00</del>
+            </div>
+
+            <button class="btn ">add to cart</button>
+
+            <div class="showcase-status">
+              <div class="wrapper">
+                <p>already sold: <b>20</b></p>
+
+                <p>available: <b>40</b></p>
+              </div>
+
+              <div class="showcase-status-bar"></div>
+            </div>
+
+            <div class="countdown-box">
+              <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+              <div class="countdown">
+                <div class="countdown-content">
+                  <p class="display-number">360</p>
+
+                  <p class="display-text">Days</p>
+                </div>
+
+                <div class="countdown-content">
+                  <p class="display-number">24</p>
+                  <p class="display-text">Hours</p>
+                </div>
+
+                <div class="countdown-content">
+                  <p class="display-number">59</p>
+                  <p class="display-text">Min</p>
+                </div>
+
+                <div class="countdown-content">
+                  <p class="display-number">00</p>
+                  <p class="display-text">Sec</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <section class="section" id="section--1">
       <div class="section__title">
         <h2 class="section__description">

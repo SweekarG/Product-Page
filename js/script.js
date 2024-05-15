@@ -1,5 +1,6 @@
 "use strict";
 
+//Tabbed component for categories
 const tab = document.querySelectorAll(".products__tab  ");
 const tabContainer = document.querySelector(".products__tab-container");
 const tabContent = document.querySelectorAll(".products__content");
@@ -19,6 +20,20 @@ tabContainer.addEventListener("click", function (e) {
 
   clicked.classList.add("products__tab--active");
 });
+
+//newsletter
+const modalNews = document.querySelector("[data-modal]");
+const modalCloseBtn = document.querySelector("[data-modal-close]");
+const modalCloseOverlay = document.querySelector("[data-modal-overlay]");
+
+// modal function
+const modalCloseFunc = function () {
+  modalNews.classList.add("closed");
+};
+
+// modal eventListener
+modalCloseOverlay.addEventListener("click", modalCloseFunc);
+modalCloseBtn.addEventListener("click", modalCloseFunc);
 
 //sticky nav bar
 
@@ -49,15 +64,7 @@ allSec.forEach(function (section) {
   section.classList.add("section--hidden");
 });
 
-//color changer menu
-const snowflakesTab = document.querySelector(".snowflakes-container");
-const darkTh = document.querySelector(".dark__mode");
-snowflakesTab.addEventListener("click", function (e) {
-  e.target.classList.add("clicked");
-  darkTh.classList.add("clicked");
-});
-
-// json
+// creting arrays for products and details and adding them to the html
 
 const products1 = [
   {
@@ -485,6 +492,8 @@ const products6 = [
     reviews: "4.9 (5 reviews)",
   },
 ];
+
+//adding products to the html
 const sectionSelectors = [
   ".section .section--featured",
   "#section--1 .products__content",
@@ -530,9 +539,9 @@ addDataToHTML(products6, productsContent5);
 
 //shopping cart
 const cart = document.querySelector(".icon-cart");
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal-cart");
 const close = document.querySelector(".close-modal");
-const overlay = document.querySelector(".overlay");
+const overlay = document.querySelector(".overlay-cart");
 
 const openModal = function () {
   modal.classList.remove("hidden");
@@ -546,6 +555,27 @@ const closeModal = function () {
 cart.addEventListener("click", openModal);
 close.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+//click on product
+const products = document.querySelectorAll(".products__img");
+const modalShow = document.querySelector(".modal-showcase");
+const overlayShow = document.querySelector(".overlay-showcase");
+const closeShow = document.querySelector(".close-modal-showcase");
+const openShowcase = function () {
+  modalShow.classList.remove("hidden");
+  overlayShow.classList.remove("hidden");
+};
+products.forEach((product) => {
+  product.addEventListener("click", openShowcase);
+});
+
+const closeShowcase = function () {
+  console.log("clicked");
+  modalShow.classList.add("hidden");
+  overlayShow.classList.add("hidden");
+};
+
+closeShow.addEventListener("click", closeShowcase);
 
 //add to cart functionality
 const productsAll = [
@@ -628,7 +658,9 @@ const addCartToHTML = () => {
            <span>${cart.quantity}</span>
            <span class="add">></span>
          </div>
+         
          <svg class="trash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" /></svg>
+         
        </div>`;
       listCart.appendChild(cartItem);
     }
@@ -637,10 +669,6 @@ const addCartToHTML = () => {
 };
 
 addCartToHTML();
-
-//Sign up form
-
-const signup = document.querySelector(".btn--show-modal");
 
 //slide on click
 
@@ -664,3 +692,19 @@ const handleBtns = () => {
   slideBtn[1].style.display =
     contentList.scrollLeft >= maxScrollLeft ? "none" : "flex";
 };
+
+//Dlete item from cart
+const parentElement = document.querySelector(".list-cart");
+
+parentElement.addEventListener("click", function (e) {
+  if (e.target.classList.contains("trash")) {
+    console.log("clicked on trash");
+    const cartItem = e.target.closest(".cart-item");
+    const productId = cartItem.dataset.productId;
+    const index = carts.findIndex((item) => item.products_id == productId);
+    if (index !== -1) {
+      carts.splice(index, 1);
+      addCartToHTML();
+    }
+  }
+});
